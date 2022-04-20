@@ -43,9 +43,10 @@ else:
             print("Going to " + url["90x90"])
             os.system(browser_config.browser_command + url["90x90"])
         elif argv[1] == "messages":
-            if user.messages_count == 1:
+            if user.messages_count() == 1:
                 print("You have " + str(user.messages_count()) + " new message.")
             else:
                 print("You have " + str(user.messages_count()) + " new messages.")
+            print(user.messages(all=False, limit=user.messages_count(), offset=0, filter="all"))
         else:
             print("ERROR: No command \"" + argv[1] + "\".")
