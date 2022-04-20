@@ -8,6 +8,7 @@ Usage:
 scl sign-in <username> <password>: Signs you in to your scratch account.
 scl version: Prints the version and exits.
 scl myid: Prints your scratch ID.
+scl mythumbnail: Opens your thumbnail in the browser.
 """)
 else:
     if argv[1] == "sign-in":
