@@ -1,3 +1,4 @@
+from ast import arg
 import scratchconnect
 from sys import argv
 if argv.__len__() == 1:
@@ -27,4 +28,7 @@ else:
             user = scratchconnect.ScratchConnect(usert[0], usert[1])
         except:
             print("ERROR: You need to be signed in to use SCL.")
+            quit()
+        if argv[1] == "version" or argv[1] == "--version" or argv[1] == "-v":
+            print("Scratch Command Line 1.0.0 by Michael Halpin.")
             quit()
