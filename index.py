@@ -10,6 +10,8 @@ scl sign-in <username> <password>: Signs you in to your scratch account.
 scl version: Prints the version and exits.
 scl myid: Prints your scratch ID.
 scl mythumbnail: Opens your thumbnail in the browser.
+
+report errors at https://scratch.mit.edu/users/applejuiceproduc
 """)
 else:
     if argv[1] == "sign-in":
@@ -36,6 +38,7 @@ else:
             quit()
         if argv[1] == "version" or argv[1] == "--version" or argv[1] == "-v":
             print("Scratch Command Line 1.0.0 by Michael Halpin.")
+            print("report errors at https://scratch.mit.edu/users/applejuiceproduc")
             quit()
         elif argv[1] == "myid":
             print(user.id())
