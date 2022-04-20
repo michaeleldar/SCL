@@ -50,8 +50,10 @@ else:
             else:
                 print("You have " + str(user.messages_count()) + " new messages.")
             if argv.__len__() == 3:
-                print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[2], end=" ")
-                print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][0]['id'], end=" ")
+                for x in range(0, int(argv[2])):    
+                    print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['actor_username'], end=" ")     
+                    print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_fragment'], end="\n\n")
+                #print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][0], end=" ")
             else:
                 print(user.messages(all=False, limit=user.messages_count(), offset=0, filter="all"))
                 
