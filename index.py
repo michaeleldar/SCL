@@ -42,5 +42,7 @@ else:
             url = user.thumbnail_url()
             print("Going to " + url["90x90"])
             os.system(browser_config.browser_command + url["90x90"])
+        elif argv[1] == "messages":
+            print("You have " + str(user.messages_count()) + " new messages.")
         else:
             print("ERROR: No command \"" + argv[1] + "\".")
