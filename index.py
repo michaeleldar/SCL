@@ -1,6 +1,7 @@
 import scratchconnect
 from sys import argv
 import os
+import browser_config
 if argv.__len__() == 1:
     print("""
 Usage:
