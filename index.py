@@ -2,6 +2,7 @@ import scratchconnect
 from sys import argv
 import os
 import browser_config
+import datetime
 if argv.__len__() == 1:
     print("""
 Usage:
@@ -52,5 +53,6 @@ else:
                 print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all"))
             else:
                 print(user.messages(all=False, limit=user.messages_count(), offset=0, filter="all"))
+                
         else:
             print("ERROR: No command \"" + argv[1] + "\".")
