@@ -50,7 +50,8 @@ else:
             else:
                 print("You have " + str(user.messages_count()) + " new messages.")
             if argv.__len__() == 3:
-                print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][0])
+                print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[1], end=" ")
+                print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][0]['id'], end=" ")
             else:
                 print(user.messages(all=False, limit=user.messages_count(), offset=0, filter="all"))
                 
