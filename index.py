@@ -39,6 +39,6 @@ else:
             print(user.id())
             quit()
         elif argv[1] == "mythumbnail":
-            os.system()
+            os.system(browser_config.browser_command + user.thumbnail_url)
         else:
             print("ERROR: No command \"" + argv[1] + "\".")
