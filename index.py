@@ -1,10 +1,12 @@
-from ast import arg
 import scratchconnect
 from sys import argv
+import os
 if argv.__len__() == 1:
     print("""
 Usage:
-scl sign-in <username> <password>
+scl sign-in <username> <password>: Signs you in to your scratch account.
+scl version: Prints the version and exits.
+scl myid: Prints your scratch ID.
 """)
 else:
     if argv[1] == "sign-in":
@@ -32,3 +34,10 @@ else:
         if argv[1] == "version" or argv[1] == "--version" or argv[1] == "-v":
             print("Scratch Command Line 1.0.0 by Michael Halpin.")
             quit()
+        elif argv[1] == "myid":
+            print(user.id())
+            quit()
+        elif argv[1] == "mythumbnail":
+            os.system()
+        else:
+            print("ERROR: No command \"" + argv[1] + "\".")
