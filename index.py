@@ -48,6 +48,9 @@ else:
                 print("You have " + str(user.messages_count()) + " new message.")
             else:
                 print("You have " + str(user.messages_count()) + " new messages.")
-            print(user.messages(all=False, limit=user.messages_count(), offset=0, filter="all"))
+            if argv.__len__() == 3:
+                print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all"))
+            else:
+                print(user.messages(all=False, limit=user.messages_count(), offset=0, filter="all"))
         else:
             print("ERROR: No command \"" + argv[1] + "\".")
