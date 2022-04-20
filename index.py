@@ -1,7 +1,10 @@
 import scratchconnect
 from sys import argv
 if argv.__len__() == 1:
-    pass
+    print("""
+Usage:
+scl sign-in <username> <password>
+""")
 else:
     if argv[1] == "sign-in":
         if argv.__len__() == 4:
