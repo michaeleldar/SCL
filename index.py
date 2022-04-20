@@ -53,7 +53,7 @@ else:
                 for x in range(0, int(argv[2])):    
                     print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['actor_username'], end=" ")
                     if user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_type'] == 0:
-                        print("commented on your project,", end=" ")
+                        print("commented on the project,", end=" ")
                     elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_type'] == 2:
                         print("replied to your comment in the studio,", end=" ")
                     else:
