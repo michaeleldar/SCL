@@ -5,11 +5,13 @@ import browser_config
 import datetime
 if argv.__len__() == 1:
     print("""
+parameters between < and > are required, while paramaters between [ and ] are optional
 Usage:
 scl sign-in <username> <password>: Signs you in to your scratch account.
 scl version: Prints the version and exits.
 scl myid: Prints your scratch ID.
 scl mythumbnail: Opens your thumbnail in the browser.
+scl messages [amount to view]: Prints out how many unread messages you have, and if amount to view to set, the latest <amount of view> messages else it will show all unread messages.
 
 report errors at https://scratch.mit.edu/users/applejuiceproduc
 """)
