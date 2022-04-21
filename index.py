@@ -76,10 +76,11 @@ else:
                         print("today.", end="\n\n")
                     elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['type'] == "remixproject":
                         print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['actor_username'], end=" ")
-                        print("remix your project", end=" ")
-                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['parent_title'], end=" ")
-                        print("into", end=" ")
-                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['title'], end="\n\n")
+                        print("remix your project \"", end="")
+                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['parent_title'], end="")
+                        print("\" into \"", end="")
+                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['title'], end="")
+                        print("\".\n\n")
                     else:
                         print("ERROR: scl error, unhandled message type. Please report this at https://scratch.mit.edu/users/applejuiceproduc")
                         quit()
