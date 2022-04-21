@@ -54,12 +54,14 @@ else:
             else:
                 print("You have " + str(user.messages_count()) + " new messages.")
             if argv.__len__() == 3:
-    
+                
                 for x in range(0, int(argv[2])):
                     if user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['type'] == "addcomment":
                         print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['actor_username'], end=" ")
                         if user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_type'] == 0:
                             print("commented on the project,", end=" ")
+                        elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_type'] == 1:
+                            print("commented on your profile,", end=" ")
                         elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_type'] == 2:
                             print("replied to your comment in the studio,", end=" ")
                         else:
@@ -75,7 +77,7 @@ else:
                         print("ERROR: scl error, unhandled message type. Please report this at https://scratch.mit.edu/users/applejuiceproduc")
                         quit()
                 
-                print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][4], end=" ")
+                print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][3], end=" ")
             else:
                 print(user.messages(all=False, limit=user.messages_count(), offset=0, filter="all"))
                 
