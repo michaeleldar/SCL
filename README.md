@@ -9,6 +9,10 @@
 ### 1.0.0 : Includes commands for signing in, viewing thumbnails and more.
 ### 1.1.0 Beta: Adds a messaging system with known bugs.
 ### 1.1.1 Beta: Adds support for studio activity messages and better error handling. Still has some bugs.
+### 1.1.2 Beta: Adds support for profile comments. Still has some bugs.
+## Still supported versions:
+### 1.0.x
+### 1.1.x
 ## Installing
 ### You must have python installed 3.x installed.
 ### On mac OS and linux, go to the releases, unzip it, and naviagate to the created directory. Then, run "python3 index.py"
