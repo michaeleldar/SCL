@@ -81,11 +81,14 @@ else:
                         print("\" into \"", end="")
                         print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['title'], end="")
                         print("\".\n\n")
+                    elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['type'] == "followuser":
+                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['actor_username'], end=" ")
+                        print("is now following you.", end="\n\n")
                     else:
                         print("ERROR: scl error, unhandled message type. Please report this at https://scratch.mit.edu/users/applejuiceproduc")
                         quit()
                 
-                #print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][5], end=" ")
+                #print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][8], end=" ")
             else:
                 print(user.messages(all=False, limit=user.messages_count(), offset=0, filter="all"))
                 
