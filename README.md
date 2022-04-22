@@ -11,6 +11,7 @@
 ### 1.1.1 Beta: Adds support for studio activity messages and better error handling. Still has some bugs.
 ### 1.1.2 Beta: Adds support for profile comments. Still has some bugs.
 ### 1.1.3 Beta: Adds support for remix messages and fixes a bug. Still has some bugs.
+### 1.1.4 Beta: Adds support for loves messages. Still has some bugs.
 ## Still supported versions:
 ### 1.0.x
 ### 1.1.x
