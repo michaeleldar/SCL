@@ -56,28 +56,28 @@ else:
             if argv.__len__() == 3:
                 
                 for x in range(0, int(argv[2])):
-                    if user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['type'] == "addcomment":
-                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['actor_username'], end=" ")
-                        if user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['comment_type'] == 0:
+                    if user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['type'] == "addcomment":
+                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['actor_username'], end=" ")
+                        if user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_type'] == 0:
                             print("commented on the project,", end=" ")
-                        elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['comment_type'] == 1:
+                        elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_type'] == 1:
                             print("commented on your profile,", end=" ")
-                        elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['comment_type'] == 2:
-                            print("replied to your comment in the studio,", end=" ")
+                        elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_type'] == 2:
+                            print("replied to your all in the studio,", end=" ")
                         else:
-                            print("ERROR: scl error, unhandled comment type. Please report this at https://scratch.mit.edu/users/applejuiceproduc")
+                            print("ERROR: scl error, unhandled all type. Please report this at https://scratch.mit.edu/users/applejuiceproduc")
                             quit()
-                        if not user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['comment_type'] == 1:
-                            print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]["comment_obj_title"], end=" ")
-                        print("\"" + user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['comment_fragment'].replace("&#39;", "'") + "\"", end="\n\n")
-                    elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['type'] == "studioactivity":
+                        if not user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_type'] == 1:
+                            print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]["comment_obj_title"], end=" ")
+                        print("\"" + user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['comment_fragment'].replace("&#39;", "'") + "\"", end="\n\n")
+                    elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['type'] == "studioactivity":
                         print("There was new activity in the studio", end=" ")
-                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['title'], end=" ")
+                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['title'], end=" ")
                         print("today.", end="\n\n")
-                    elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['type'] == "remixproject":
-                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['actor_username'], end=" ")
+                    elif user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['type'] == "remixproject":
+                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['actor_username'], end=" ")
                         print("remix your project \"", end="")
-                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="comment")[0][x]['parent_title'], end="")
+                        print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['parent_title'], end="")
                         print("\" into \"", end="")
                         print(user.messages(all=False, limit=int(argv[2]), offset=0, filter="all")[0][x]['title'], end="")
                         print("\".\n\n")
